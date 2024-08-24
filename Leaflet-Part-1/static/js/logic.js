@@ -6,9 +6,9 @@
   // Create our map, giving it the streetmap and earthquakes layers to display on load. Reference Module 15- 10-Stu-GeoJson
  let myMap = L.map("map", {
     center: [
-      37.09, -95.71
+      37.09, -95.71 
     ],
-    zoom: 5
+    zoom: 6
   });
   
 // Adding a tile layer (the background map image) to our map: Reference Module 15- 10-Stu-GeoJson
