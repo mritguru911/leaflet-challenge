@@ -8,7 +8,7 @@
     center: [
       37.09, -95.71 
     ],
-    zoom: 6
+    zoom: 5
   });
   
 // Adding a tile layer (the background map image) to our map: Reference Module 15- 10-Stu-GeoJson
