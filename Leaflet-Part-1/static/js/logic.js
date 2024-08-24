@@ -3,7 +3,7 @@
  In this section I referenced Moduule 15.1  for the starting zoom level.
  ************************************************************************/
  
- // Create the map object with specified center and zoom level.
+  // Create our map, giving it the streetmap and earthquakes layers to display on load. Reference Module 15- 10-Stu-GeoJson
  let myMap = L.map("map", {
     center: [
       37.09, -95.71
@@ -11,16 +11,16 @@
     zoom: 5
   });
   
-// Adding a tile layer (the background map image) to our map:
-// We use the addTo() method to add objects to our map.
+// Adding a tile layer (the background map image) to our map: Reference Module 15- 10-Stu-GeoJson
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+// We use the addTo() method to add objects to our map.
 }).addTo(myMap);
 
-// Query the Geo Data for the earthquake data. 
+// Query the Geo Data for the earthquake data.  ("All Earthquakes from the Past 7 Days") JSON representation of the data
 let geoData = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 
-// Load the GEOJSON data with D3 and then create markers on map. //Reference Module 15- 10-Stu-GeoJson
+// Load the GEOJSON data with D3 and then create markers on map: Reference Module 15- 10-Stu-GeoJson
 d3.json(geoData).then(function (data) {
 
     // Creating a GeoJSON layer with the retrieved data
